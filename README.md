@@ -16,3 +16,7 @@ Once the input prompt is on screen, input one of these three filenames to run a 
 Limitations
 -----------
 The program is limited to only being able to detect X (Twitter) usernames, Facebook access tokens, Instagram usernames, Google API keys, and Slack user access tokens. However, other patterns would easily be able to be added to the program if needed. Also, the program only scans one file at a time, but can scan an unlimited number of files while it is active.
+
+Comments
+--------
+- My screen recorder does not let me record the command line interface, so I am making the recording directly though PyCharm. The results should be the same when the program is launched via CMD though.
