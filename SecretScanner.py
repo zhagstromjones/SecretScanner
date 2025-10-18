@@ -1,10 +1,6 @@
-# Accept a directory path or file as input
 import argparse
 import fileinput
 import re
-
-# Accept a directory path or file as input
-
 
 # Use regex to detect common secret patterns
 pattern1 = r"/(^|[^@\w])@(\w{1,15})\b/" # Twitter username
@@ -13,7 +9,9 @@ pattern3 = r"(?:@)([A-Za-z0-9_](?:(?:[A-Za-z0-9_]|(?:.(?!.))){0,28}(?:[A-Za-z0-9
 pattern4 = r"AIza[0-9A-Za-z-_]{35}" # Google API key
 pattern5 = r"xoxp-[0-9]{11}-[0-9]{11}-[0-9a-zA-Z]{24}" # Slack user access token
 
-file = fileinput.input('secrets.txt')
+# Accept a directory path or file as input
+file = fileinput.input(input("Input file name : "))
+
 # Output a report of findings (filename, line number, matched string)
 lineNum = 1
 for line in file:
